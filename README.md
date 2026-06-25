@@ -9,6 +9,7 @@
 | 01 | 日本国憲法 | 条単位・旧字体・純自然言語 | ✅ 前文+103条 |
 | 02 | 道路交通法 | 章単位・常用漢字・JSON frontmatter | ✅ 全9章+附則 |
 | 03 | 建築基準法 | 章単位・常用漢字・JSON frontmatter | ✅ 全7章 |
+| 04 | 宇宙基本法 | 章単位・常用漢字・JSON frontmatter | ✅ 全3章 |
 
 ## なぜモノレポか
 
@@ -29,11 +30,11 @@
 各法令は独立したスタイルで収録する。スタイルの設計判断は
 各サブディレクトリの README または Issue に記録する。
 
-| スタイル特徴 | 01-kenpo | 02-doukou-hou | 03-kenchiku |
-|-------------|----------|---------------|-------------|
-| 単位 | 1条=1ファイル | 1章=1ファイル | 1章=1ファイル |
-| メタデータ | なし | JSON frontmatter | JSON frontmatter |
-| 字体 | 旧字体 | 常用漢字体 | 常用漢字体 |
-| gitattributes | なし | あり | あり |
-| 出典 | なし | source.txt + frontmatter | frontmatter |
-| ファイル数 | 116 | 14 | 9 |
+| スタイル特徴 | 01-kenpo | 02-doukou-hou | 03-kenchiku | 04-uchu |
+|-------------|----------|---------------|-------------|---------|
+| 単位 | 1条=1ファイル | 1章=1ファイル | 1章=1ファイル | 1章=1ファイル |
+| メタデータ | なし | JSON frontmatter | JSON frontmatter | JSON frontmatter |
+| 字体 | 旧字体 | 常用漢字体 | 常用漢字体 | 常用漢字体 |
+| gitattributes | なし | あり | あり | あり |
+| 出典 | なし | source.txt + frontmatter | frontmatter | frontmatter |
+| ファイル数 | 116 | 14 | 9 | 5 |
