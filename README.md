@@ -18,6 +18,7 @@
 | 02 | 道路交通法 | 章単位・常用漢字・JSON frontmatter | ✅ 全9章+附則 |
 | 03 | 建築基準法 | 章単位・常用漢字・JSON frontmatter | ✅ 全7章 |
 | 04 | 宇宙基本法 | 章単位・常用漢字・JSON frontmatter | ✅ 全3章 |
+| 05 | 宇宙活動法 | 章単位・常用漢字・JSON frontmatter | ✅ 全8章+附則 |
 
 ## サブ/
 
@@ -34,7 +35,7 @@
 
 ### graph/
 
-- `terms.json` — 用語定義グラフ（24ノード・28エッジ）
+- `terms.json` — 用語定義グラフ（34ノード・38エッジ）
 - `refs.json` — 条文引用関係
 - `committees.json` — 審議委員会マップ（4委員会 + 組織グラフ）
 - `shocho.json` — 省庁グラフ（内閣府・文科省・経産省・国交省・警察庁の所管関係）
@@ -65,11 +66,11 @@
 各法令は独立したスタイルで収録する。スタイルの設計判断は
 各サブディレクトリの README または Issue に記録する。
 
-| スタイル特徴 | 01-kenpo | 02-doukou-hou | 03-kenchiku | 04-uchu |
-|-------------|----------|---------------|-------------|---------|
-| 単位 | 1条=1ファイル | 1章=1ファイル | 1章=1ファイル | 1章=1ファイル |
-| メタデータ | なし | JSON frontmatter | JSON frontmatter | JSON frontmatter |
-| 字体 | 旧字体 | 常用漢字体 | 常用漢字体 | 常用漢字体 |
-| gitattributes | なし | あり | あり | あり |
-| 出典 | なし | source.txt + frontmatter | frontmatter | frontmatter |
-| ファイル数 | 116 | 14 | 9 | 5 | 3 |
+| スタイル特徴 | 01-kenpo | 02-doukou-hou | 03-kenchiku | 04-uchu | 05-uchu-katsudo |
+|-------------|----------|---------------|-------------|---------|-----------------|
+| 単位 | 1条=1ファイル | 1章=1ファイル | 1章=1ファイル | 1章=1ファイル | 1章=1ファイル |
+| メタデータ | なし | JSON frontmatter | JSON frontmatter | JSON frontmatter | JSON frontmatter |
+| 字体 | 旧字体 | 常用漢字体 | 常用漢字体 | 常用漢字体 | 常用漢字体 |
+| gitattributes | なし | あり | あり | あり | あり |
+| 出典 | なし | source.txt + frontmatter | frontmatter | frontmatter | frontmatter |
+| ファイル数 | 116 | 14 | 9 | 5 | 10 |

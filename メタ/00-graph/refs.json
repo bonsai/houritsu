@@ -7,6 +7,9 @@
     { "from": "02-doukou-hou/01-sokusoku", "to": "01-kenpo/03-kokumin/13-013", "type": "principle", "note": "公共の福祉の原則" },
     { "from": "04-uchu/01-sokusoku/03-003", "to": "01-kenpo/02-senso-no-ki/01-009", "type": "compliance", "note": "平和利用は憲法9条の理念に基づく" },
     { "from": "03-kenchiku/01-sokusoku/02-002", "to": "02-doukou-hou/01-sokusoku/02-002", "type": "definition_similar", "note": "「道路」の定義が類似" },
-    { "from": "02-doukou-hou/08-bassoku/99-122", "to": "03-kenchiku/07-bassoku/99-099", "type": "両罰規定", "note": "両罰規定の構造が同一" }
+    { "from": "02-doukou-hou/08-bassoku/99-122", "to": "03-kenchiku/07-bassoku/99-099", "type": "両罰規定", "note": "両罰規定の構造が同一" },
+    { "from": "05-uchu-katsudo/01-sokusoku/01-001", "to": "04-uchu/01-sokusoku/01-001", "type": "compliance", "note": "宇宙活動法は宇宙基本法の基本理念にのっとる" },
+    { "from": "05-uchu-katsudo/01-sokusoku/03-003", "to": "04-uchu/01-sokusoku/16-016", "type": "reference", "note": "宇宙基本法16条の民間事業者促進施策" },
+    { "from": "05-uchu-katsudo/07-zatsusoku/55-055", "to": "03-kenchiku/05-shinsakai/05-005", "type": "同型機関", "note": "宇宙政策委員会への諮問義務（建築審査会と同型）" }
   ]
 }

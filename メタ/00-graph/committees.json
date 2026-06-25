@@ -6,6 +6,21 @@
   },
   "committees": [
     {
+      "id": "space-policy-committee",
+      "name": "宇宙政策委員会",
+      "type": "審議会",
+      "law": "05-uchu-katsudo",
+      "articles": [55],
+      "parent": "内閣府",
+      "head": "委員（学識経験者）",
+      "powers": [
+        "安全基準策定時の諮問受理",
+        "許可取消し・改善命令時の諮問受理",
+        "補償契約重要事項の諮問受理"
+      ],
+      "ref": "05-uchu-katsudo/07-zatsusoku"
+    },
+    {
       "id": "space-hq",
       "name": "宇宙開発戦略本部",
       "type": "本部",
@@ -71,12 +86,14 @@
       { "id": "内閣府", "type": "organization" },
       { "id": "国会", "type": "organization" },
       { "id": "都道府県", "type": "organization" },
+      { "id": "space-policy-committee", "type": "committee" },
       { "id": "space-hq", "type": "committee" },
       { "id": "npsc", "type": "committee" },
       { "id": "pref-psc", "type": "committee" },
       { "id": "pref-building-exam", "type": "committee" }
     ],
     "edges": [
+      { "source": "space-policy-committee", "target": "内閣府", "relation": "belongs_to" },
       { "source": "space-hq", "target": "内閣", "relation": "belongs_to" },
       { "source": "npsc", "target": "内閣府", "relation": "belongs_to" },
       { "source": "pref-psc", "target": "都道府県", "relation": "belongs_to" },

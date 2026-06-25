@@ -9,9 +9,9 @@
       "id": "cabinet-office",
       "name": "内閣府",
       "abb": "内閣府",
-      "laws": ["04-uchu"],
+      "laws": ["04-uchu", "05-uchu-katsudo"],
       "committees": ["space-hq", "space-policy-committee"],
-      "jurisdiction": "宇宙基本法、宇宙開発戦略本部、宇宙政策委員会"
+      "jurisdiction": "宇宙基本法、宇宙活動法、宇宙開発戦略本部、宇宙政策委員会"
     },
     {
       "id": "mext",
@@ -68,6 +68,7 @@
       { "id": "npsc", "type": "committee", "label": "国家公安委員会" },
       { "id": "pref-psc", "type": "committee", "label": "都道府県公安委員会" },
       { "id": "pref-building-exam", "type": "committee", "label": "建築審査会" },
+      { "id": "05-uchu-katsudo", "type": "law", "label": "宇宙活動法" },
       { "id": "04-uchu", "type": "law", "label": "宇宙基本法" },
       { "id": "02-doukou-hou", "type": "law", "label": "道路交通法" },
       { "id": "03-kenchiku", "type": "law", "label": "建築基準法" }
@@ -75,6 +76,7 @@
     "edges": [
       { "source": "cabinet-office", "target": "space-hq", "relation": "houses" },
       { "source": "cabinet-office", "target": "space-policy-committee", "relation": "houses" },
+      { "source": "cabinet-office", "target": "05-uchu-katsudo", "relation": "administers" },
       { "source": "cabinet-office", "target": "04-uchu", "relation": "administers" },
       { "source": "mext", "target": "jaxa", "relation": "supervises" },
       { "source": "mlit", "target": "mlit-housing", "relation": "has_bureau" },
