@@ -1,0 +1,69 @@
+{
+  "meta": {
+    "title": "宇宙開発 コンプライアンスルール",
+    "description": "法令から抽出した条件付き制約ルール",
+    "version": "0.1.0"
+  },
+  "rules": [
+    {
+      "id": "R001",
+      "name": "平和利用の原則",
+      "source": "04-uchu/01-sokusoku/03-003",
+      "description": "宇宙開発は平和目的に限る",
+      "condition": "true",
+      "constraint": "purpose != 'military'",
+      "severity": "error",
+      "on_violation": "憲法第9条および宇宙基本法第3条違反"
+    },
+    {
+      "id": "R002",
+      "name": "安全の確保",
+      "source": "04-uchu/01-sokusoku/08-008",
+      "description": "宇宙活動の安全を確保すること",
+      "condition": "has_launch_plan",
+      "constraint": "safety_certification == true",
+      "severity": "error",
+      "on_violation": "宇宙活動法に基づく安全審査未了"
+    },
+    {
+      "id": "R003",
+      "name": "事業者許可",
+      "source": "02-doukou-hou/06-menkyo/01-082",
+      "description": "宇宙活動を行う事業者は許可が必要",
+      "condition": "operator.nationality == 'JP'",
+      "constraint": "operator.has_license == true",
+      "severity": "error",
+      "on_violation": "無許可宇宙活動"
+    },
+    {
+      "id": "R004",
+      "name": "賠償能力",
+      "source": "04-uchu/01-sokusoku/09-009",
+      "description": "宇宙活動に伴う損害賠償のための措置",
+      "condition": "true",
+      "constraint": "operator.has_insurance == true",
+      "severity": "warning",
+      "on_violation": "賠償措置未契約"
+    },
+    {
+      "id": "R005",
+      "name": "環境配慮",
+      "source": "04-uchu/01-sokusoku/07-007",
+      "description": "宇宙環境の保全に配慮すること",
+      "condition": "satellite.orbit == 'leo'",
+      "constraint": "has_deorbit_plan == true",
+      "severity": "warning",
+      "on_violation": "デブリ対策未実施"
+    },
+    {
+      "id": "R006",
+      "name": "国際協調",
+      "source": "04-uchu/02-kihon/06-014",
+      "description": "国際的な枠組みとの整合",
+      "condition": "satellite.purpose == 'comms'",
+      "constraint": "frequency_allocated == true",
+      "severity": "error",
+      "on_violation": "ITUへの周波数登録なし"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "meta": {
+    "title": "コンプライアンスエージェント 行動グラフ",
+    "description": "状態遷移 + ルール適用の実行フロー"
+  },
+  "entry": "input_query",
+  "nodes": [
+    {
+      "id": "input_query",
+      "type": "receive",
+      "label": "ユーザー入力受付",
+      "next": "parse_intent"
+    },
+    {
+      "id": "parse_intent",
+      "type": "classify",
+      "label": "意図解析",
+      "model": "04-uchu",
+      "next": "load_world_model"
+    },
+    {
+      "id": "load_world_model",
+      "type": "query",
+      "label": "世界モデル照合",
+      "source": "world-model.json",
+      "next": "apply_rules"
+    },
+    {
+      "id": "apply_rules",
+      "type": "evaluate",
+      "label": "コンプライアンスルール適用",
+      "source": "compliance-rules.json",
+      "next": "graph_lookup"
+    },
+    {
+      "id": "graph_lookup",
+      "type": "query",
+      "label": "用語グラフ横断検索",
+      "source": "../00-graph/terms.json",
+      "next": "decide"
+    },
+    {
+      "id": "decide",
+      "type": "decision",
+      "label": "判定",
+      "branches": [
+        { "condition": "all_pass", "next": "result_pass" },
+        { "condition": "has_error", "next": "result_violation" },
+        { "condition": "has_warning", "next": "result_warning" }
+      ]
+    },
+    {
+      "id": "result_pass",
+      "type": "output",
+      "label": "✅ 適合",
+      "next": null
+    },
+    {
+      "id": "result_violation",
+      "type": "output",
+      "label": "❌ 違反",
+      "detail": "on_violation",
+      "next": null
+    },
+    {
+      "id": "result_warning",
+      "type": "output",
+      "label": "⚠ 要確認",
+      "detail": "on_violation",
+      "next": null
+    }
+  ]
+}

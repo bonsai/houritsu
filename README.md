@@ -2,6 +2,14 @@
 
 法律を超えた用語の共通性を活かすため、単一リポジトリで管理する。
 
+## コンプライアンスエンジン
+
+`00-agent/` — 宇宙開発コンプライアンス自動判定エンジン。
+
+- `world-model.json` — 世界モデル（人工衛星・射場・事業者等のエンティティと状態遷移）
+- `compliance-rules.json` — コンプライアンスルール（6ルール: 平和利用・安全・許可・賠償・環境・国際）
+- `agent-graph.json` — エージェント行動グラフ（入力→解析→照合→判定→出力）
+
 ## グラフ構造
 
 `00-graph/` — 法律間の用語・引用関係をJSONグラフで表現。
@@ -46,3 +54,4 @@
 | 出典 | なし | source.txt + frontmatter | frontmatter | frontmatter |
 | ファイル数 | 116 | 14 | 9 | 5 |
 | グラフ | 00-graph | 00-graph | 00-graph | 00-graph |
+| エージェント | 00-agent | 00-agent | 00-agent | 00-agent |

@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "title": "宇宙開発 世界モデル",
+    "description": "宇宙開発ドメインのエンティティ・状態・遷移を定義",
+    "version": "0.1.0"
+  },
+  "entities": [
+    {
+      "id": "satellite",
+      "name": "人工衛星",
+      "type": "object",
+      "properties": {
+        "orbit": ["leo", "geo", "ssO"],
+        "purpose": ["comms", "observation", "science", "experiment"],
+        "mass_kg": "number",
+        "operator": "organization"
+      },
+      "requires": ["license", "frequency_allocation", "liability_insurance"]
+    },
+    {
+      "id": "launch_vehicle",
+      "name": "打上げロケット",
+      "type": "object",
+      "properties": {
+        "type": ["solid", "liquid", "hybrid"],
+        "payload_capacity_kg": "number",
+        "launch_site": "string"
+      },
+      "requires": ["launch_permit", "safety_certification"]
+    },
+    {
+      "id": "operator",
+      "name": "事業者",
+      "type": "actor",
+      "properties": {
+        "nationality": "string",
+        "has_license": "boolean",
+        "has_insurance": "boolean"
+      }
+    },
+    {
+      "id": "launch_site",
+      "name": "射場",
+      "type": "facility",
+      "properties": {
+        "location": "string",
+        "type": ["domestic", "overseas"],
+        "has_safety_zone": "boolean"
+      }
+    }
+  ],
+  "states": [
+    {
+      "id": "planning",
+      "name": "計画段階",
+      "next": ["design_review", "abandoned"]
+    },
+    {
+      "id": "design_review",
+      "name": "設計審査",
+      "next": ["license_application", "redesign"],
+      "compliance_check": "peaceful_purpose"
+    },
+    {
+      "id": "license_application",
+      "name": "許可申請",
+      "next": ["approved", "rejected"],
+      "compliance_check": "all"
+    },
+    {
+      "id": "approved",
+      "name": "許可済み",
+      "next": ["launch_prep", "suspended"]
+    },
+    {
+      "id": "launch_prep",
+      "name": "打上げ準備",
+      "next": ["launch", "delayed"]
+    },
+    {
+      "id": "launch",
+      "name": "打上げ実施",
+      "next": ["operating", "failed"]
+    },
+    {
+      "id": "operating",
+      "name": "運用中",
+      "next": ["deorbited", "extended"]
+    },
+    {
+      "id": "deorbited",
+      "name": "廃棄完了",
+      "next": []
+    }
+  ],
+  "relations": [
+    { "source": "operator", "target": "satellite", "type": "operates" },
+    { "source": "operator", "target": "launch_vehicle", "type": "uses" },
+    { "source": "launch_vehicle", "target": "launch_site", "type": "launched_from" },
+    { "source": "satellite", "target": "orbit", "type": "placed_in" }
+  ]
+}
