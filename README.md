@@ -2,6 +2,13 @@
 
 法律を超えた用語の共通性を活かすため、単一リポジトリで管理する。
 
+## グラフ構造
+
+`00-graph/` — 法律間の用語・引用関係をJSONグラフで表現。
+
+- `terms.json` — 用語定義グラフ（24ノード・28エッジ）
+- `refs.json` — 条文引用関係
+
 ## 収録法令
 
 | # | 法令 | スタイル | 収録 |
@@ -38,3 +45,4 @@
 | gitattributes | なし | あり | あり | あり |
 | 出典 | なし | source.txt + frontmatter | frontmatter | frontmatter |
 | ファイル数 | 116 | 14 | 9 | 5 |
+| グラフ | 00-graph | 00-graph | 00-graph | 00-graph |

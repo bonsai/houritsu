@@ -1,0 +1,12 @@
+{
+  "meta": {
+    "title": "法律間 引用グラフ",
+    "description": "条文レベルでの法律間引用関係"
+  },
+  "refs": [
+    { "from": "02-doukou-hou/01-sokusoku", "to": "01-kenpo/03-kokumin/13-013", "type": "principle", "note": "公共の福祉の原則" },
+    { "from": "04-uchu/01-sokusoku/03-003", "to": "01-kenpo/02-senso-no-ki/01-009", "type": "compliance", "note": "平和利用は憲法9条の理念に基づく" },
+    { "from": "03-kenchiku/01-sokusoku/02-002", "to": "02-doukou-hou/01-sokusoku/02-002", "type": "definition_similar", "note": "「道路」の定義が類似" },
+    { "from": "02-doukou-hou/08-bassoku/99-122", "to": "03-kenchiku/07-bassoku/99-099", "type": "両罰規定", "note": "両罰規定の構造が同一" }
+  ]
+}
