@@ -28,7 +28,7 @@
 | 02 | 道路交通法 | 章単位・常用漢字・JSON frontmatter | ✅ 全9章+附則 |
 | 03 | 建築基準法 | 章単位・常用漢字・JSON frontmatter | ✅ 全7章 |
 | 04 | 宇宙基本法 | 章単位・常用漢字・JSON frontmatter | ✅ 全3章 |
-| 05 | 宇宙分野NPO抄録 | 抄録・常用漢字・JSON frontmatter | ✅ NPO法接続 |
+| npo | 宇宙分野NPO抄録 | 抄録・常用漢字・JSON frontmatter | ✅ NPO法接続 |
 
 ## なぜモノレポか
 
