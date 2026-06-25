@@ -1,8 +1,11 @@
 ---
-chapter: 4
-title: 運転者
-articles: 53-75
-source: https://elaws.e-gov.go.jp/law/322AC0000000105
+---
+{
+  "chapter": 4,
+  "title": "運転者",
+  "articles": "53-75",
+  "source": "https://elaws.e-gov.go.jp/law/322AC0000000105"
+}
 ---
 
 # 第4章 運転者
@@ -30,3 +33,5 @@ source: https://elaws.e-gov.go.jp/law/322AC0000000105
 ## 第57条（初心運転者）
 
 普通自動車の運転に係る初心運転者は、公安委員会が定める期間内は、その運転に係る普通自動車に初心運転者標識を表示しなければならない。
+
+

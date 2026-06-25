@@ -1,12 +1,14 @@
 ---
-title: 道路交通法 概要
-law_number: 昭和35年法律第105号
-enacted: 1960-06-25
-enforced: 1960-12-20
-source: https://elaws.e-gov.go.jp/law/322AC0000000105
-chapters: 9
-articles: 156
-style: chapter-unit hybrid
+{
+  "title": "道路交通法 概要",
+  "law_number": "昭和35年法律第105号",
+  "enacted": "1960-06-25",
+  "enforced": "1960-12-20",
+  "source": "https://elaws.e-gov.go.jp/law/322AC0000000105",
+  "chapters": 9,
+  "articles": 156,
+  "style": "chapter-unit hybrid"
+}
 ---
 
 # 道路交通法
@@ -35,3 +37,5 @@ style: chapter-unit hybrid
 | 第7章 自動車教習所 | 第109条〜第114条 | 指定自動車教習所 |
 | 第8章 罰則 | 第115条〜第130条 | 罰金、懲役 |
 | 第9章 雑則 | 第131条〜第156条 | 経過措置、委任 |
+
+

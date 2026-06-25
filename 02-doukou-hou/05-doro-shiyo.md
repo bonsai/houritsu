@@ -1,8 +1,11 @@
 ---
-chapter: 5
-title: 道路の使用
-articles: 76-81
-source: https://elaws.e-gov.go.jp/law/322AC0000000105
+---
+{
+  "chapter": 5,
+  "title": "道路の使用",
+  "articles": "76-81",
+  "source": "https://elaws.e-gov.go.jp/law/322AC0000000105"
+}
 ---
 
 # 第5章 道路の使用
@@ -36,3 +39,5 @@ source: https://elaws.e-gov.go.jp/law/322AC0000000105
 ## 第81条（車両の放置の禁止）
 
 車両の所有者その他の者は、道路において車両を放置し、交通の妨害となる状態を継続させてはならない。
+
+

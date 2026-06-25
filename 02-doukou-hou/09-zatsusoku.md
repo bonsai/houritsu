@@ -1,8 +1,11 @@
 ---
-chapter: 9
-title: 雑則
-articles: 131-145
-source: https://elaws.e-gov.go.jp/law/322AC0000000105
+---
+{
+  "chapter": 9,
+  "title": "雑則",
+  "articles": "131-145",
+  "source": "https://elaws.e-gov.go.jp/law/322AC0000000105"
+}
 ---
 
 # 第9章 雑則
@@ -30,3 +33,5 @@ source: https://elaws.e-gov.go.jp/law/322AC0000000105
 ## 第136条（外国の運転免許）
 
 外国の権限ある機関が発行した運転免許証を所持する者は、公安委員会の認定を受けることにより、本邦において自動車等を運転することができる。
+
+

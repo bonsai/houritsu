@@ -1,8 +1,11 @@
 ---
-chapter: 3
-title: 車両及び路面電車の交通方法
-articles: 17-52
-source: https://elaws.e-gov.go.jp/law/322AC0000000105
+---
+{
+  "chapter": 3,
+  "title": "車両及び路面電車の交通方法",
+  "articles": "17-52",
+  "source": "https://elaws.e-gov.go.jp/law/322AC0000000105"
+}
 ---
 
 # 第3章 車両及び路面電車の交通方法
@@ -38,3 +41,5 @@ source: https://elaws.e-gov.go.jp/law/322AC0000000105
 ## 第24条（緊急自動車の優先）
 
 緊急自動車が接近してきたときは、車両及び路面電車は、道路の左側に寄って、その進行を妨げてはならない。
+
+

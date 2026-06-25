@@ -1,8 +1,11 @@
 ---
-chapter: appendix
-title: 附則
-articles: 1-11
-source: https://elaws.e-gov.go.jp/law/322AC0000000105
+---
+{
+  "chapter": "appendix",
+  "title": "附則",
+  "articles": "1-11",
+  "source": "https://elaws.e-gov.go.jp/law/322AC0000000105"
+}
 ---
 
 # 附則
@@ -22,3 +25,5 @@ source: https://elaws.e-gov.go.jp/law/322AC0000000105
 ## 第4条（政令への委任）
 
 この法律の施行に関し必要な経過措置は、政令で定める。
+
+

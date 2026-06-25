@@ -9,7 +9,7 @@ kenpo（日本国憲法）の反省を踏まえた新スタイル。
 | 項目 | 本リポジトリ |
 |------|-------------|
 | 単位 | 1章=1ファイル（全9章+雑則） |
-| メタデータ | YAML frontmatter |
+| メタデータ | JSON frontmatter |
 | 字体 | 常用漢字体 |
 | リンク | Markdown 形式 |
 | gitattributes | あり |

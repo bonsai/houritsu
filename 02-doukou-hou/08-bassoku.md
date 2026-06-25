@@ -1,8 +1,11 @@
 ---
-chapter: 8
-title: 罰則
-articles: 115-130
-source: https://elaws.e-gov.go.jp/law/322AC0000000105
+---
+{
+  "chapter": 8,
+  "title": "罰則",
+  "articles": "115-130",
+  "source": "https://elaws.e-gov.go.jp/law/322AC0000000105"
+}
 ---
 
 # 第8章 罰則
@@ -38,3 +41,5 @@ source: https://elaws.e-gov.go.jp/law/322AC0000000105
 ## 第122条（両罰規定）
 
 法人の代表者又は法人若しくは人の代理人、使用人その他の従業者が、その法人又は人の業務に関して前各条の違反行為をしたときは、行為者を罰するほか、その法人又は人に対しても各本条の罰金刑を科する。
+
+

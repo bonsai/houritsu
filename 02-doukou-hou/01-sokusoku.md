@@ -1,9 +1,10 @@
-
 ---
-chapter: 1
-title: 総則
-articles: 1-10
-source: https://elaws.e-gov.go.jp/law/322AC0000000105
+{
+  "chapter": 1,
+  "title": "総則",
+  "articles": "1-10",
+  "source": "https://elaws.e-gov.go.jp/law/322AC0000000105"
+}
 ---
 
 # 第1章 総則
@@ -33,4 +34,6 @@ source: https://elaws.e-gov.go.jp/law/322AC0000000105
 一 道路交通法第百十四条の二に規定する緊急自動車
 
 二 身体障害者用の車椅子
+
+
 

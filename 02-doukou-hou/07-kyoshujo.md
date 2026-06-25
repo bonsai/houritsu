@@ -1,8 +1,11 @@
 ---
-chapter: 7
-title: 自動車教習所
-articles: 109-114
-source: https://elaws.e-gov.go.jp/law/322AC0000000105
+---
+{
+  "chapter": 7,
+  "title": "自動車教習所",
+  "articles": "109-114",
+  "source": "https://elaws.e-gov.go.jp/law/322AC0000000105"
+}
 ---
 
 # 第7章 自動車教習所
@@ -30,3 +33,5 @@ source: https://elaws.e-gov.go.jp/law/322AC0000000105
 ## 第114条（公示）
 
 公安委員会は、指定自動車教習所の指定又はその取消しをしたときは、遅滞なく、その旨を公示しなければならない。
+
+

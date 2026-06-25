@@ -1,8 +1,11 @@
 ---
-chapter: 2
-title: 歩行者の通行方法
-articles: 11-16
-source: https://elaws.e-gov.go.jp/law/322AC0000000105
+---
+{
+  "chapter": 2,
+  "title": "歩行者の通行方法",
+  "articles": "11-16",
+  "source": "https://elaws.e-gov.go.jp/law/322AC0000000105"
+}
 ---
 
 # 第2章 歩行者の通行方法
@@ -30,3 +33,5 @@ source: https://elaws.e-gov.go.jp/law/322AC0000000105
 ## 第16条（児童等の保護）
 
 児童又は幼児を保護する責任のある者は、児童又は幼児を道路において通行させる場合には、児童又は幼児の生命又は身体の安全を確保するため、その通行の方法について必要な注意をしなければならない。
+
+
