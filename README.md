@@ -28,6 +28,7 @@
 | 02 | 道路交通法 | 章単位・常用漢字・JSON frontmatter | ✅ 全9章+附則 |
 | 03 | 建築基準法 | 章単位・常用漢字・JSON frontmatter | ✅ 全7章 |
 | 04 | 宇宙基本法 | 章単位・常用漢字・JSON frontmatter | ✅ 全3章 |
+| 05 | 宇宙分野NPO抄録 | 抄録・常用漢字・JSON frontmatter | ✅ NPO法接続 |
 
 ## なぜモノレポか
 
@@ -55,6 +56,6 @@
 | 字体 | 旧字体 | 常用漢字体 | 常用漢字体 | 常用漢字体 |
 | gitattributes | なし | あり | あり | あり |
 | 出典 | なし | source.txt + frontmatter | frontmatter | frontmatter |
-| ファイル数 | 116 | 14 | 9 | 5 |
-| グラフ | 00-graph | 00-graph | 00-graph | 00-graph |
-| エージェント | 00-agent | 00-agent | 00-agent | 00-agent |
+| ファイル数 | 116 | 14 | 9 | 5 | 3 |
+| グラフ | 00-graph | 00-graph | 00-graph | 00-graph | 00-graph |
+| エージェント | 00-agent | 00-agent | 00-agent | 00-agent | 00-agent |
