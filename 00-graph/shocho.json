@@ -1,0 +1,93 @@
+{
+  "meta": {
+    "title": "省庁グラフ — 法律と行政組織のマッピング",
+    "description": "収録法令を所管する省庁・審議会の関係グラフ",
+    "note": "宇宙開発は内閣府が司令塔。国交省（衛星測位・リモセン）・経産省（産業振興）・文科省（JAXA）が分担。単一省庁に属さない横断型。"
+  },
+  "ministries": [
+    {
+      "id": "cabinet-office",
+      "name": "内閣府",
+      "abb": "内閣府",
+      "laws": ["04-uchu"],
+      "committees": ["space-hq", "space-policy-committee"],
+      "jurisdiction": "宇宙基本法、宇宙開発戦略本部、宇宙政策委員会"
+    },
+    {
+      "id": "mext",
+      "name": "文部科学省",
+      "abb": "文科省",
+      "laws": [],
+      "committees": [],
+      "jurisdiction": "JAXA（宇宙航空研究開発機構）の所管"
+    },
+    {
+      "id": "meti",
+      "name": "経済産業省",
+      "abb": "経産省",
+      "laws": [],
+      "committees": [],
+      "jurisdiction": "宇宙産業振興、衛星データ利用"
+    },
+    {
+      "id": "mlit",
+      "name": "国土交通省",
+      "abb": "国交省",
+      "laws": ["02-doukou-hou", "03-kenchiku"],
+      "committees": ["npsc", "pref-psc"],
+      "jurisdiction": "道路交通法（警察との共管）、建築基準法、衛星測位"
+    },
+    {
+      "id": "npa",
+      "name": "警察庁",
+      "abb": "警察庁",
+      "laws": ["02-doukou-hou"],
+      "committees": ["npsc", "pref-psc"],
+      "jurisdiction": "国家公安委員会の事務局、道路交通法の実務執行"
+    },
+    {
+      "id": "mlit-housing",
+      "name": "国土交通省 住宅局",
+      "abb": "国交省住宅局",
+      "laws": ["03-kenchiku"],
+      "committees": ["pref-building-exam"],
+      "jurisdiction": "建築基準法の所管"
+    }
+  ],
+  "graph": {
+    "nodes": [
+      { "id": "cabinet-office", "type": "ministry", "label": "内閣府" },
+      { "id": "mext", "type": "ministry", "label": "文科省" },
+      { "id": "meti", "type": "ministry", "label": "経産省" },
+      { "id": "mlit", "type": "ministry", "label": "国交省" },
+      { "id": "mlit-housing", "type": "bureau", "label": "国交省住宅局" },
+      { "id": "npa", "type": "agency", "label": "警察庁" },
+      { "id": "space-hq", "type": "committee", "label": "宇宙開発戦略本部" },
+      { "id": "space-policy-committee", "type": "committee", "label": "宇宙政策委員会" },
+      { "id": "jaxa", "type": "agency", "label": "JAXA" },
+      { "id": "npsc", "type": "committee", "label": "国家公安委員会" },
+      { "id": "pref-psc", "type": "committee", "label": "都道府県公安委員会" },
+      { "id": "pref-building-exam", "type": "committee", "label": "建築審査会" },
+      { "id": "04-uchu", "type": "law", "label": "宇宙基本法" },
+      { "id": "02-doukou-hou", "type": "law", "label": "道路交通法" },
+      { "id": "03-kenchiku", "type": "law", "label": "建築基準法" }
+    ],
+    "edges": [
+      { "source": "cabinet-office", "target": "space-hq", "relation": "houses" },
+      { "source": "cabinet-office", "target": "space-policy-committee", "relation": "houses" },
+      { "source": "cabinet-office", "target": "04-uchu", "relation": "administers" },
+      { "source": "mext", "target": "jaxa", "relation": "supervises" },
+      { "source": "mlit", "target": "mlit-housing", "relation": "has_bureau" },
+      { "source": "mlit-housing", "target": "03-kenchiku", "relation": "administers" },
+      { "source": "mlit", "target": "npsc", "relation": "oversees" },
+      { "source": "npa", "target": "npsc", "relation": "secretariat" },
+      { "source": "npsc", "target": "pref-psc", "relation": "supervises" },
+      { "source": "pref-psc", "target": "02-doukou-hou", "relation": "enforces" },
+      { "source": "pref-building-exam", "target": "03-kenchiku", "relation": "enforces" },
+      { "source": "cabinet-office", "target": "mext", "relation": "coordinates" },
+      { "source": "cabinet-office", "target": "meti", "relation": "coordinates" },
+      { "source": "cabinet-office", "target": "mlit", "relation": "coordinates" },
+      { "source": "space-hq", "target": "cabinet-office", "relation": "reports_to" }
+    ]
+  }
+}
