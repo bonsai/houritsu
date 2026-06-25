@@ -1,0 +1,87 @@
+{
+  "meta": {
+    "title": "法律横断 審議委員会マップ",
+    "description": "収録法令に登場する委員会・審査会・本部の一覧と権限マッピング",
+    "generated": "2026-06-24"
+  },
+  "committees": [
+    {
+      "id": "space-hq",
+      "name": "宇宙開発戦略本部",
+      "type": "本部",
+      "law": "04-uchu",
+      "articles": [18, 19, 20, 21, 22, 23, 24],
+      "parent": "内閣",
+      "head": "内閣総理大臣",
+      "powers": [
+        "宇宙基本計画の作成",
+        "施策の総合調整"
+      ],
+      "ref": "04-uchu/03-honbu"
+    },
+    {
+      "id": "pref-building-exam",
+      "name": "建築審査会",
+      "type": "審査会",
+      "law": "03-kenchiku",
+      "articles": [78, 79, 80],
+      "parent": "都道府県",
+      "head": "委員（学識経験者）",
+      "powers": [
+        "建築確認処分の審査請求受理",
+        "公聴会開催",
+        "裁決"
+      ],
+      "ref": "03-kenchiku/05-shinsakai"
+    },
+    {
+      "id": "npsc",
+      "name": "国家公安委員会",
+      "type": "委員会",
+      "law": "02-doukou-hou",
+      "articles": [132],
+      "parent": "内閣府",
+      "head": "委員長（国務大臣）",
+      "powers": [
+        "施行細則の制定",
+        "警察運営の指導"
+      ],
+      "ref": "02-doukou-hou/09-zatsusoku"
+    },
+    {
+      "id": "pref-psc",
+      "name": "都道府県公安委員会",
+      "type": "委員会",
+      "law": "02-doukou-hou",
+      "articles": [77, 79, 80, 82, 83, 86, 88, 109, 110, 111, 112, 113, 114, 133],
+      "parent": "都道府県",
+      "head": "委員（都道府県知事が任命）",
+      "powers": [
+        "運転免許の交付・取消し",
+        "道路使用許可",
+        "指定自動車教習所の指定・取消し",
+        "初心運転者期間の指定"
+      ],
+      "ref": "02-doukou-hou/06-menkyo"
+    }
+  ],
+  "adjacency": {
+    "nodes": [
+      { "id": "内閣", "type": "organization" },
+      { "id": "内閣府", "type": "organization" },
+      { "id": "国会", "type": "organization" },
+      { "id": "都道府県", "type": "organization" },
+      { "id": "space-hq", "type": "committee" },
+      { "id": "npsc", "type": "committee" },
+      { "id": "pref-psc", "type": "committee" },
+      { "id": "pref-building-exam", "type": "committee" }
+    ],
+    "edges": [
+      { "source": "space-hq", "target": "内閣", "relation": "belongs_to" },
+      { "source": "npsc", "target": "内閣府", "relation": "belongs_to" },
+      { "source": "pref-psc", "target": "都道府県", "relation": "belongs_to" },
+      { "source": "pref-building-exam", "target": "都道府県", "relation": "belongs_to" },
+      { "source": "npsc", "target": "pref-psc", "relation": "supervises" }
+    ]
+  }
+}
