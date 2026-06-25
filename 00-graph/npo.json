@@ -1,0 +1,55 @@
+{
+  "meta": {
+    "title": "NPO 法マッピング",
+    "description": "特定非営利活動促進法（NPO法）の構造と既存法令との関係",
+    "law": "特定非営利活動促進法",
+    "number": "平成10年法律第7号",
+    "enacted": "1998-03-25",
+    "ministry": "cabinet-office",
+    "note": "NPO法は内閣府所管。認定NPO法人には税制優遇があり、税法との接続が重要。"
+  },
+  "npo_types": [
+    {
+      "type": "一般NPO法人",
+      "requirements": ["定款", "役員構成", "事業報告書提出"],
+      "certifier": "都道府県"
+    },
+    {
+      "type": "認定NPO法人",
+      "requirements": ["一般NPO要件 + 収益事業比率 < 50%", "PST比率 < 50%", "役員報酬基準"],
+      "certifier": "国税庁",
+      "benefits": ["寄附金控除", "みなし寄附金"]
+    },
+    {
+      "type": "特例認定NPO法人",
+      "requirements": ["認定NPOに準じる", "期限5年"],
+      "certifier": "国税庁",
+      "benefits": ["認定NPOに準じる"]
+    }
+  ],
+  "graph": {
+    "nodes": [
+      { "id": "npo-law", "type": "law", "label": "NPO法" },
+      { "id": "cabinet-office", "type": "ministry", "label": "内閣府" },
+      { "id": "prefecture", "type": "organization", "label": "都道府県" },
+      { "id": "nta", "type": "agency", "label": "国税庁" },
+      { "id": "general-npo", "type": "entity", "label": "一般NPO法人" },
+      { "id": "certified-npo", "type": "entity", "label": "認定NPO法人" },
+      { "id": "special-npo", "type": "entity", "label": "特例認定NPO法人" },
+      { "id": "tax-law", "type": "law", "label": "税法（寄附金控除）" },
+      { "id": "02-doukou-hou", "type": "law", "label": "道路交通法" },
+      { "id": "03-kenchiku", "type": "law", "label": "建築基準法" }
+    ],
+    "edges": [
+      { "source": "cabinet-office", "target": "npo-law", "relation": "administers" },
+      { "source": "prefecture", "target": "general-npo", "relation": "certifies" },
+      { "source": "nta", "target": "certified-npo", "relation": "certifies" },
+      { "source": "nta", "target": "special-npo", "relation": "certifies" },
+      { "source": "certified-npo", "target": "tax-law", "relation": "benefits_from" },
+      { "source": "general-npo", "target": "certified-npo", "relation": "can_upgrade" },
+      { "source": "certified-npo", "target": "special-npo", "relation": "alternative" },
+      { "source": "general-npo", "target": "02-doukou-hou", "relation": "subject_to" },
+      { "source": "general-npo", "target": "03-kenchiku", "relation": "subject_to" }
+    ]
+  }
+}
